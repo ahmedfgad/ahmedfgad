@@ -10,7 +10,7 @@
   <a href="https://vilvik.com"><img src="https://img.shields.io/badge/Vilvik-vilvik.com-2563EB" alt="Vilvik website"></a>
 </p>
 
-I'm a machine learning researcher in Ottawa, Canada. I've spent years making evolutionary algorithms practical, first as an open-source library and now as a product. I also write books and tutorials about deep learning and computer vision.
+I'm a machine learning researcher in Ottawa, Canada. I've spent years making evolutionary algorithms practical, first as an open-source library and now as a product. I also write books about deep learning, computer vision and large language models, and I build mobile apps.
 
 ## What I'm Building
 
@@ -40,9 +40,12 @@ pip install vilvik
 
 **[PyGAD](https://github.com/ahmedfgad/GeneticAlgorithmPython)** is the open-source genetic algorithm library behind it all. It handles single and multi-objective problems and can train Keras and PyTorch models.
 
+[Website (pygad.com)](https://pygad.com) · [Documentation](https://pygad.readthedocs.io) · [GitHub](https://github.com/ahmedfgad/GeneticAlgorithmPython) · [PyPI](https://pypi.org/project/pygad)
+
 <p>
   <a href="https://github.com/ahmedfgad/GeneticAlgorithmPython"><img src="https://img.shields.io/github/stars/ahmedfgad/GeneticAlgorithmPython?style=flat&logo=github&label=Stars" alt="GitHub stars"></a>
   <a href="https://pypi.org/project/pygad"><img src="https://img.shields.io/pypi/dm/pygad?logo=pypi&logoColor=white&label=Downloads" alt="Monthly downloads"></a>
+  <a href="https://pygad.com"><img src="https://img.shields.io/badge/Website-pygad.com-0876D8" alt="PyGAD website"></a>
   <a href="https://pygad.readthedocs.io"><img src="https://img.shields.io/badge/Docs-Read%20the%20Docs-8CA1AF?logo=readthedocs&logoColor=white" alt="Documentation"></a>
   <a href="https://doi.org/10.1007/s11042-023-17167-y"><img src="https://img.shields.io/badge/Paper-Springer-0076A8?logo=springer&logoColor=white" alt="PyGAD paper"></a>
 </p>
@@ -56,14 +59,42 @@ pip install vilvik
 | [TorchGA](https://github.com/ahmedfgad/TorchGA) · [KerasGA](https://github.com/ahmedfgad/KerasGA) | Train PyTorch and Keras models with PyGAD |
 | [Mask-RCNN-TF2](https://github.com/ahmedfgad/Mask-RCNN-TF2) | Mask R-CNN for object detection and segmentation on TensorFlow 2 |
 | [FederatedLearning](https://github.com/ahmedfgad/FederatedLearning) | A federated learning demo in Python using sockets |
-| [CoinTex](https://github.com/ahmedfgad/CoinTex) | A cross-platform game written in Python with Kivy |
 
-## Books and Research
+## Books
 
-- **[Introduction to Deep Learning and Neural Networks with Python](https://shop.elsevier.com/books/introduction-to-deep-learning-and-neural-networks-with-python/gad/978-0-323-90933-4)** (Academic Press, 2020), with Fatima Ezzahra Jarmouni. [Code](https://github.com/ahmedfgad/IntroDLPython)
-- **Building Android Apps in Python Using Kivy with Android Studio** (Apress, 2019)
-- **Practical Computer Vision Applications Using Deep Learning with CNNs** (Apress, 2018)
-- **[PyGAD: An Intuitive Genetic Algorithm Python Library](https://doi.org/10.1007/s11042-023-17167-y)**, Multimedia Tools and Applications. [arXiv](https://arxiv.org/abs/2106.06158)
+<table>
+  <tr>
+    <td align="center" valign="top" width="25%"><a href="https://www.amazon.com/dp/B0GTPRZ6MY"><img src="assets/books/transformers-llms.jpg" height="200" alt="Transformers and Large Language Models book cover"></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.amazon.com/dp/0323909337"><img src="assets/books/intro-deep-learning.jpg" height="200" alt="Introduction to Deep Learning and Neural Networks with Python book cover"></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.amazon.com/dp/1484250303"><img src="assets/books/android-kivy.jpg" height="200" alt="Building Android Apps in Python Using Kivy with Android Studio book cover"></a></td>
+    <td align="center" valign="top" width="25%"><a href="https://www.amazon.com/dp/1484241665"><img src="assets/books/practical-computer-vision.jpg" height="200" alt="Practical Computer Vision Applications Using Deep Learning with CNNs book cover"></a></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><b>Transformers and Large Language Models</b><br><sub>A Hands-On Guide to RAG and Agentic AI<br>Apress, 2026</sub><br><a href="https://www.amazon.com/dp/B0GTPRZ6MY">Amazon</a> · <a href="https://link.springer.com/book/10.1007/979-8-8688-2785-3">Springer</a> · <a href="https://github.com/ahmedfgad/Transformers-Gad">Code</a></td>
+    <td align="center" valign="top"><b>Introduction to Deep Learning and Neural Networks with Python</b><br><sub>A Practical Guide<br>Academic Press, 2020</sub><br><a href="https://www.amazon.com/dp/0323909337">Amazon</a> · <a href="https://github.com/ahmedfgad/IntroDLPython">Code</a></td>
+    <td align="center" valign="top"><b>Building Android Apps in Python Using Kivy with Android Studio</b><br><sub>With Pyjnius, Plyer, and Buildozer<br>Apress, 2019</sub><br><a href="https://www.amazon.com/dp/1484250303">Amazon</a> · <a href="https://github.com/Apress/building-android-apps-in-python-using-kivy">Code</a></td>
+    <td align="center" valign="top"><b>Practical Computer Vision Applications Using Deep Learning with CNNs</b><br><sub>With Examples in Python Using TensorFlow and Kivy<br>Apress, 2018</sub><br><a href="https://www.amazon.com/dp/1484241665">Amazon</a> · <a href="https://github.com/Apress/practical-computer-vision-applications">Code</a></td>
+  </tr>
+</table>
+
+**Research:** [PyGAD: An Intuitive Genetic Algorithm Python Library](https://doi.org/10.1007/s11042-023-17167-y), Multimedia Tools and Applications ([arXiv](https://arxiv.org/abs/2106.06158))
+
+## My Apps
+
+<p>
+  <a href="https://play.google.com/store/apps/dev?id=4818949690814466544"><img src="https://img.shields.io/badge/Google%20Play-All%20My%20Apps-414141?logo=googleplay&logoColor=white" alt="My apps on Google Play"></a>
+  <a href="https://apps.apple.com/us/developer/ahmed-gad/id6806126560"><img src="https://img.shields.io/badge/App%20Store-All%20My%20Apps-0D96F6?logo=appstore&logoColor=white" alt="My apps on the App Store"></a>
+</p>
+
+<table>
+  <tr>
+    <td align="center" valign="top" width="20%"><img src="assets/apps/takmila.png" width="72" alt="Takmila app icon"><br><b>Takmila</b><br><sub>Quran memorization by filling in the missing word</sub><br><a href="https://play.google.com/store/apps/details?id=org.takmila.takmila">Google&nbsp;Play</a> · <a href="https://apps.apple.com/us/app/takmila-quran-memorization/id6806126558">App&nbsp;Store</a></td>
+    <td align="center" valign="top" width="20%"><img src="assets/apps/mawj.png" width="72" alt="Mawj Quran Radio app icon"><br><b>Mawj Quran Radio</b><br><sub>Live Quran radio, recitations and archives</sub><br><a href="https://play.google.com/store/apps/details?id=io.github.ahmedfgad.mawjradio">Google&nbsp;Play</a> · <a href="https://apps.apple.com/us/app/mawj-quran-radio/id6806831995">App&nbsp;Store</a></td>
+    <td align="center" valign="top" width="20%"><img src="assets/apps/swellfire.png" width="72" alt="SwellFire app icon"><br><b>SwellFire</b><br><sub>Lead a growing squad through gates to boss battles</sub><br><a href="https://play.google.com/store/apps/details?id=com.vilvik.swellfire">Google&nbsp;Play</a></td>
+    <td align="center" valign="top" width="20%"><img src="assets/apps/cointex.png" width="72" alt="CoinTex app icon"><br><b>CoinTex</b><br><sub>60 arcade levels across 6 worlds, built with Python</sub><br><a href="https://play.google.com/store/apps/details?id=coin.tex.cointexreactfast">Google&nbsp;Play</a> · <a href="https://github.com/ahmedfgad/CoinTex">Code</a></td>
+    <td align="center" valign="top" width="20%"><img src="assets/apps/easyupload.png" width="72" alt="EasyUpload app icon"><br><b>EasyUpload</b><br><sub>Send files from Android to a desktop PC</sub><br><a href="https://play.google.com/store/apps/details?id=gad.heartbeat.androidflask.easyupload">Google&nbsp;Play</a></td>
+  </tr>
+</table>
 
 ## Tools I Use
 

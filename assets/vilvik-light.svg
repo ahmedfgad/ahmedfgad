@@ -8,28 +8,19 @@
 .t3 { animation: rise .5s ease-out .8s both; }
 .t4 { animation: rise .5s ease-out .95s both; }
 .t5 { animation: rise .5s ease-out 1.1s both; }
-
-/* Only the animated parts get a fill-box origin; the inner mirror groups keep
-   their own transform attribute untouched. */
 .vm [class^="vlogo-anim__"] { transform-box: fill-box; transform-origin: center; }
-@keyframes drop {
-  0%   { opacity: 0; transform: translateY(-220%) scale(.75); }
-  60%  { opacity: 1; transform: translateY(8%) scale(1.04); }
-  80%  { transform: translateY(-3%) scale(.98); }
-  100% { opacity: 1; transform: none; }
-}
-@keyframes glint {
-  0%, 86%, 100% { transform: none; }
-  90% { transform: translateY(-9%) scale(1.06); }
-  94% { transform: translateY(2%) scale(.99); }
-}
-.vlogo-anim__horn-l  { animation: drop .85s cubic-bezier(.34,1.56,.64,1) both 0s, glint 7s ease-in-out 1.9s infinite; }
-.vlogo-anim__outer-l { animation: drop .85s cubic-bezier(.34,1.56,.64,1) both .2s; }
-.vlogo-anim__inner-l { animation: drop .85s cubic-bezier(.34,1.56,.64,1) both .4s; }
-.vlogo-anim__inner-r { animation: drop .85s cubic-bezier(.34,1.56,.64,1) both .6s; }
-.vlogo-anim__outer-r { animation: drop .85s cubic-bezier(.34,1.56,.64,1) both .8s; }
-.vlogo-anim__horn-r  { animation: drop .85s cubic-bezier(.34,1.56,.64,1) both 1s, glint 7s ease-in-out 2.1s infinite; }
-
+@keyframes v-horn-l { 0.0% { transform: translateY(-220%) scale(.75); opacity: 0; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 6.375% { transform: translateY(8%) scale(1.04); opacity: 1; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 8.5% { transform: translateY(-3%) scale(.98); animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 10.625% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 52.5% { transform: none; opacity: 1; animation-timing-function: ease-in-out; } 56.0% { transform: translateY(-9%) scale(1.06); animation-timing-function: ease-in-out; } 58.625% { transform: translateY(2%) scale(.99); animation-timing-function: ease-in-out; } 61.25% { transform: none; opacity: 1; animation-timing-function: ease-in-out; } 82.5% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.55,0,.75,.2); } 91.25% { transform: translateY(120%) scale(.7); opacity: 0; animation-timing-function: cubic-bezier(.55,0,.75,.2); } 100.0% { transform: translateY(120%) scale(.7); opacity: 0; animation-timing-function: linear; } }
+.vm .vlogo-anim__horn-l { animation: v-horn-l 8000ms linear infinite; }
+@keyframes v-outer-l { 0.0% { transform: translateY(-220%) scale(.75); opacity: 0; animation-timing-function: linear; } 2.5% { transform: translateY(-220%) scale(.75); opacity: 0; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 8.875% { transform: translateY(8%) scale(1.04); opacity: 1; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 11.0% { transform: translateY(-3%) scale(.98); animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 13.125% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 83.75% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.55,0,.75,.2); } 92.5% { transform: translateY(120%) scale(.7); opacity: 0; animation-timing-function: cubic-bezier(.55,0,.75,.2); } 100.0% { transform: translateY(120%) scale(.7); opacity: 0; animation-timing-function: linear; } }
+.vm .vlogo-anim__outer-l { animation: v-outer-l 8000ms linear infinite; }
+@keyframes v-inner-l { 0.0% { transform: translateY(-220%) scale(.75); opacity: 0; animation-timing-function: linear; } 5.0% { transform: translateY(-220%) scale(.75); opacity: 0; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 11.375% { transform: translateY(8%) scale(1.04); opacity: 1; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 13.5% { transform: translateY(-3%) scale(.98); animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 15.625% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 85.0% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.55,0,.75,.2); } 93.75% { transform: translateY(120%) scale(.7); opacity: 0; animation-timing-function: cubic-bezier(.55,0,.75,.2); } 100.0% { transform: translateY(120%) scale(.7); opacity: 0; animation-timing-function: linear; } }
+.vm .vlogo-anim__inner-l { animation: v-inner-l 8000ms linear infinite; }
+@keyframes v-inner-r { 0.0% { transform: translateY(-220%) scale(.75); opacity: 0; animation-timing-function: linear; } 7.5% { transform: translateY(-220%) scale(.75); opacity: 0; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 13.875% { transform: translateY(8%) scale(1.04); opacity: 1; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 16.0% { transform: translateY(-3%) scale(.98); animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 18.125% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 86.25% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.55,0,.75,.2); } 95.0% { transform: translateY(120%) scale(.7); opacity: 0; animation-timing-function: cubic-bezier(.55,0,.75,.2); } 100.0% { transform: translateY(120%) scale(.7); opacity: 0; animation-timing-function: linear; } }
+.vm .vlogo-anim__inner-r { animation: v-inner-r 8000ms linear infinite; }
+@keyframes v-outer-r { 0.0% { transform: translateY(-220%) scale(.75); opacity: 0; animation-timing-function: linear; } 10.0% { transform: translateY(-220%) scale(.75); opacity: 0; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 16.375% { transform: translateY(8%) scale(1.04); opacity: 1; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 18.5% { transform: translateY(-3%) scale(.98); animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 20.625% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 87.5% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.55,0,.75,.2); } 96.25% { transform: translateY(120%) scale(.7); opacity: 0; animation-timing-function: cubic-bezier(.55,0,.75,.2); } 100.0% { transform: translateY(120%) scale(.7); opacity: 0; animation-timing-function: linear; } }
+.vm .vlogo-anim__outer-r { animation: v-outer-r 8000ms linear infinite; }
+@keyframes v-horn-r { 0.0% { transform: translateY(-220%) scale(.75); opacity: 0; animation-timing-function: linear; } 12.5% { transform: translateY(-220%) scale(.75); opacity: 0; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 18.875% { transform: translateY(8%) scale(1.04); opacity: 1; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 21.0% { transform: translateY(-3%) scale(.98); animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 23.125% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.34,1.56,.64,1); } 53.75% { transform: none; opacity: 1; animation-timing-function: ease-in-out; } 57.25% { transform: translateY(-9%) scale(1.06); animation-timing-function: ease-in-out; } 59.875% { transform: translateY(2%) scale(.99); animation-timing-function: ease-in-out; } 62.5% { transform: none; opacity: 1; animation-timing-function: ease-in-out; } 88.75% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.55,0,.75,.2); } 97.5% { transform: translateY(120%) scale(.7); opacity: 0; animation-timing-function: cubic-bezier(.55,0,.75,.2); } 100.0% { transform: translateY(120%) scale(.7); opacity: 0; animation-timing-function: linear; } }
+.vm .vlogo-anim__horn-r { animation: v-horn-r 8000ms linear infinite; }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
 </style>
 <rect x="1" y="1" width="1198" height="228" rx="14" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>

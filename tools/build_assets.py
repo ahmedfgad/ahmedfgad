@@ -192,55 +192,165 @@ def card(c, *, label, kicker, title, title_color, lines, link, mark, mark_style)
     return svg_doc(w, h, label, style, body)
 
 
-VILVIK_STYLE = """
-/* Only the animated parts get a fill-box origin; the inner mirror groups keep
-   their own transform attribute untouched. */
-.vm [class^="vlogo-anim__"] { transform-box: fill-box; transform-origin: center; }
-@keyframes drop {
-  0%   { opacity: 0; transform: translateY(-220%) scale(.75); }
-  60%  { opacity: 1; transform: translateY(8%) scale(1.04); }
-  80%  { transform: translateY(-3%) scale(.98); }
-  100% { opacity: 1; transform: none; }
-}
-@keyframes glint {
-  0%, 86%, 100% { transform: none; }
-  90% { transform: translateY(-9%) scale(1.06); }
-  94% { transform: translateY(2%) scale(.99); }
-}
-.vlogo-anim__horn-l  { animation: drop .85s cubic-bezier(.34,1.56,.64,1) both 0s, glint 7s ease-in-out 1.9s infinite; }
-.vlogo-anim__outer-l { animation: drop .85s cubic-bezier(.34,1.56,.64,1) both .2s; }
-.vlogo-anim__inner-l { animation: drop .85s cubic-bezier(.34,1.56,.64,1) both .4s; }
-.vlogo-anim__inner-r { animation: drop .85s cubic-bezier(.34,1.56,.64,1) both .6s; }
-.vlogo-anim__outer-r { animation: drop .85s cubic-bezier(.34,1.56,.64,1) both .8s; }
-.vlogo-anim__horn-r  { animation: drop .85s cubic-bezier(.34,1.56,.64,1) both 1s, glint 7s ease-in-out 2.1s infinite; }
-"""
+# ------------------------------------------------------- looping motion ---
+#
+# GitHub shows README images with <img>, so the logos can't run the JavaScript
+# that animates them on vilvik.com and pygad.com. Instead each moving part gets
+# one CSS keyframe track covering a whole loop. A track is built from
+# "segments" (an animation that starts at a given time), with the part resting
+# in place between them. Each loop ends in the same state it starts in, so the
+# repeat is seamless.
 
-# Converge the PyGAD parts in waves (rungs, strands, jaw, head), then run a soft
-# ripple through the DNA rungs every few seconds, like pygad.com does with JS.
-PYGAD_STYLE = """
-.pm g { transform-box: fill-box; transform-origin: 50% 50%; }
-@keyframes in-a { from { opacity: 0; transform: translate(-60px,-40px) rotate(-20deg) scale(.4); } 35% { opacity: 1; } to { opacity: 1; transform: none; } }
-@keyframes in-b { from { opacity: 0; transform: translate(70px,30px) rotate(18deg) scale(.4); } 35% { opacity: 1; } to { opacity: 1; transform: none; } }
-@keyframes in-c { from { opacity: 0; transform: translate(-30px,60px) rotate(14deg) scale(.4); } 35% { opacity: 1; } to { opacity: 1; transform: none; } }
-@keyframes in-d { from { opacity: 0; transform: translate(40px,-60px) rotate(-16deg) scale(.4); } 35% { opacity: 1; } to { opacity: 1; transform: none; } }
-@keyframes blink { 0%, 50% { transform: scaleY(.08); } 100% { transform: none; } }
-@keyframes ripple { 0%, 88%, 100% { transform: none; } 92% { transform: scale(1.12); } 96% { transform: scale(.97); } }
-.pm .helix-left  .rung-outer  { animation: in-a .9s cubic-bezier(.22,1,.36,1) .00s backwards, ripple 5.2s ease-in-out 2.2s infinite; }
-.pm .helix-left  .rung-middle { animation: in-b .9s cubic-bezier(.22,1,.36,1) .05s backwards, ripple 5.2s ease-in-out 2.3s infinite; }
-.pm .helix-left  .rung-inner  { animation: in-c .9s cubic-bezier(.22,1,.36,1) .10s backwards, ripple 5.2s ease-in-out 2.4s infinite; }
-.pm .helix-right .rung-inner  { animation: in-d .9s cubic-bezier(.22,1,.36,1) .15s backwards, ripple 5.2s ease-in-out 2.4s infinite; }
-.pm .helix-right .rung-middle { animation: in-a .9s cubic-bezier(.22,1,.36,1) .20s backwards, ripple 5.2s ease-in-out 2.3s infinite; }
-.pm .helix-right .rung-outer  { animation: in-b .9s cubic-bezier(.22,1,.36,1) .25s backwards, ripple 5.2s ease-in-out 2.2s infinite; }
-.pm .helix-left  .strand-upper { animation: in-c .9s cubic-bezier(.22,1,.36,1) .21s backwards; }
-.pm .helix-left  .strand-lower { animation: in-d .9s cubic-bezier(.22,1,.36,1) .25s backwards; }
-.pm .helix-right .strand-upper { animation: in-a .9s cubic-bezier(.22,1,.36,1) .29s backwards; }
-.pm .helix-right .strand-lower { animation: in-b .9s cubic-bezier(.22,1,.36,1) .33s backwards; }
-.pm .jaw      { animation: in-c .9s cubic-bezier(.22,1,.36,1) .42s backwards; }
-.pm .crown    { animation: in-d .9s cubic-bezier(.22,1,.36,1) .63s backwards; }
-.pm .snout    { animation: in-a .9s cubic-bezier(.22,1,.36,1) .67s backwards; }
-.pm .nostrils { animation: in-b .9s cubic-bezier(.22,1,.36,1) .71s backwards; }
-.pm .eye      { animation: blink 1.1s cubic-bezier(.34,1.56,.64,1) .84s backwards; }
-"""
+OUT = "cubic-bezier(.22,1,.36,1)"
+IN_OUT = "cubic-bezier(.65,0,.35,1)"
+SPRING = "cubic-bezier(.34,1.56,.64,1)"
+EXIT = "cubic-bezier(.55,0,.75,.2)"
+REST = {"transform": "none", "opacity": "1"}
+
+
+def track(name, selector, total_ms, segments, first=None):
+    """CSS for one part: `segments` is a list of (start_ms, duration_ms, easing, frames),
+    where frames are (offset 0..1, {property: value}). `first` is the state at t=0."""
+    points = [(0.0, dict(first or REST), "linear")]
+    for start, duration, easing, frames in sorted(segments, key=lambda s: s[0]):
+        for offset, props in frames:
+            points.append((start + offset * duration, props, easing))
+    points.append((float(total_ms), dict(points[-1][1]), "linear"))
+    merged = {}
+    for at, props, easing in points:
+        pct = round(at / total_ms * 100, 3)
+        slot = merged.setdefault(pct, [{}, easing])
+        slot[0].update(props)
+        slot[1] = easing
+    rules = []
+    for pct, (props, easing) in merged.items():
+        body = " ".join(f"{k}: {v};" for k, v in props.items())
+        rules.append(f"{pct}% {{ {body} animation-timing-function: {easing}; }}")
+    return (
+        f"@keyframes {name} {{ {' '.join(rules)} }}\n"
+        f"{selector} {{ animation: {name} {total_ms}ms linear infinite; }}"
+    )
+
+
+def vilvik_style():
+    """The vilvik.com cascade build: the six parts drop in one after another, the
+    horns lift once, then everything falls away and the build starts again."""
+    total = 8000
+    hidden = {"transform": "translateY(-220%) scale(.75)", "opacity": "0"}
+    drop = [
+        (0, hidden),
+        (.6, {"transform": "translateY(8%) scale(1.04)", "opacity": "1"}),
+        (.8, {"transform": "translateY(-3%) scale(.98)"}),
+        (1, REST),
+    ]
+    glint = [
+        (0, REST),
+        (.4, {"transform": "translateY(-9%) scale(1.06)"}),
+        (.7, {"transform": "translateY(2%) scale(.99)"}),
+        (1, REST),
+    ]
+    leave = [(0, REST), (1, {"transform": "translateY(120%) scale(.7)", "opacity": "0"})]
+    parts = ["horn-l", "outer-l", "inner-l", "inner-r", "outer-r", "horn-r"]
+    css = ['.vm [class^="vlogo-anim__"] { transform-box: fill-box; transform-origin: center; }']
+    for i, part in enumerate(parts):
+        segments = [(i * 200, 850, SPRING, drop), (6600 + i * 100, 700, EXIT, leave)]
+        if part.startswith("horn"):
+            segments.append((4200 + (100 if part == "horn-r" else 0), 700, "ease-in-out", glint))
+        css.append(track(f"v-{part}", f".vm .vlogo-anim__{part}", total, segments, first=hidden))
+    return "\n".join(css)
+
+
+def seeded(seed):
+    """Port of the seeded generator in pygad-site/logo-motion.js, so the parts
+    scatter to the same places as on pygad.com."""
+    state = seed
+
+    def imul(a, b):
+        return ((a & 0xFFFFFFFF) * (b & 0xFFFFFFFF)) & 0xFFFFFFFF
+
+    def rand():
+        nonlocal state
+        state = (state + 0x6D2B79F5) & 0xFFFFFFFF
+        t = imul(state ^ (state >> 15), 1 | state)
+        t = ((t + imul(t ^ (t >> 7), 61 | t)) & 0xFFFFFFFF) ^ t
+        return ((t ^ (t >> 14)) & 0xFFFFFFFF) / 4294967296
+
+    return rand
+
+
+def pygad_style():
+    """The pygad.com mark motion (converge, ripple, blink and strike from
+    logo-motion.js) laid out on one 16 s loop that ends by scattering the
+    parts back out to where the next loop gathers them from."""
+    total = 16000
+    rand = seeded(7)
+    waves = [
+        [".helix-left .rung-outer", ".helix-left .rung-middle", ".helix-left .rung-inner",
+         ".helix-right .rung-outer", ".helix-right .rung-middle", ".helix-right .rung-inner"],
+        [".helix-left .strand-lower", ".helix-left .strand-upper",
+         ".helix-right .strand-lower", ".helix-right .strand-upper"],
+        [".jaw"],
+        [".crown", ".snout", ".nostrils"],
+    ]
+    segments, first = {}, {}
+
+    def add(selector, *segment):
+        segments.setdefault(selector, []).append(segment)
+
+    # Converge in, and the reverse at the end of the loop (head first).
+    for w, wave in enumerate(waves):
+        for i, sel in enumerate(wave):
+            dx, dy, turn = (rand() - .5) * 260, (rand() - .5) * 200, (rand() - .5) * 70
+            away = {"transform": f"translate({dx:.1f}px, {dy:.1f}px) rotate({turn:.1f}deg) scale(.4)", "opacity": "0"}
+            first[sel] = away
+            add(sel, w * 210 + i * 40, 900, OUT, [(0, away), (.35, {"opacity": "1"}), (1, REST)])
+            add(sel, 14450 + (3 - w) * 150 + i * 30, 700, EXIT, [(0, REST), (.4, {"opacity": "1"}), (1, away)])
+
+    eye_shut = {"transform": "scaleY(.08)", "opacity": "0"}
+    for eye in (".eye-left", ".eye-right"):
+        first[eye] = eye_shut
+        add(eye, 840, 1100, SPRING, [(0, eye_shut), (.25, {"transform": "scaleY(.08)", "opacity": "1"}),
+                                     (.5, {"transform": "scaleY(.08)"}), (1, REST)])
+        # The second ripple of each loop ends with a blink, as on the site.
+        add(eye, 9700 + 1500, 220, IN_OUT, [(0, REST), (.5, {"transform": "scaleY(.1)"}), (1, REST)])
+        add(eye, 14300, 300, EXIT, [(0, REST), (1, eye_shut)])
+
+    # Ripple through the DNA rungs, inner to outer, while the strands breathe out.
+    for start in (4540, 9700):
+        for step, ring in enumerate(("rung-inner", "rung-middle", "rung-outer")):
+            for side in ("helix-left", "helix-right"):
+                add(f".{side} .{ring}", start + step * 140, 900, IN_OUT, [
+                    (0, REST), (.4, {"transform": "scaleY(.62)", "opacity": ".55"}),
+                    (.75, {"transform": "scaleY(1.04)", "opacity": "1"}), (1, REST)])
+        for side, push in (("helix-left", -7), ("helix-right", 7)):
+            add(f".{side}", start + 260, 1100, IN_OUT, [
+                (0, REST), (.45, {"transform": f"translateX({push}px)"}), (1, REST)])
+
+    # The strike (a hover effect on pygad.com, played once per loop here).
+    strike = 12500
+    add(".face", strike, 760, IN_OUT, [
+        (0, REST), (.28, {"transform": "translateY(8px) scale(.95)"}),
+        (.5, {"transform": "translateY(-6px) scale(1.1)"}), (1, REST)])
+    add(".jaw", strike, 760, IN_OUT, [
+        (0, REST), (.3, REST), (.52, {"transform": "translateY(14px) scaleY(1.08)"}), (1, REST)])
+    for eye in (".eye-left", ".eye-right"):
+        add(f"{eye} .pupil", strike, 760, IN_OUT, [
+            (0, REST), (.3, {"transform": "scaleX(.5)"}), (.6, {"transform": "scaleX(.5)"}), (1, REST)])
+    for side, pull in (("helix-left", 20), ("helix-right", -20)):
+        add(f".{side}", strike + 120, 900, OUT, [
+            (0, REST), (.45, {"transform": f"translateX({pull}px) scaleX(.9)"}),
+            (.75, {"transform": f"translateX({-pull * .25:.0f}px) scaleX(1.02)"}), (1, REST)])
+
+    css = [
+        ".pm g { transform-box: fill-box; transform-origin: 50% 50%; }",
+        ".pm .helix-left { transform-origin: 100% 50%; }",
+        ".pm .helix-right { transform-origin: 0 50%; }",
+        ".pm .jaw { transform-origin: 50% 0; }",
+        ".pm .face { transform-origin: 50% 70%; }",
+    ]
+    for n, (sel, segs) in enumerate(segments.items()):
+        css.append(track(f"pg{n}", f".pm {sel}", total, segs, first=first.get(sel)))
+    return "\n".join(css)
 
 
 def vilvik(c):
@@ -258,13 +368,13 @@ def vilvik(c):
         ],
         link="vilvik.com",
         mark=mark,
-        mark_style=VILVIK_STYLE,
+        mark_style=vilvik_style(),
     )
 
 
 def pygad(c):
     src = (TOOLS / "pygad-mark.src.svg").read_text()
-    mark = f'<g class="pm">{nested_mark(src, 36, 26, 190)}</g>'
+    mark = f'<g class="pm">{nested_mark(src, 26, 10, 212)}</g>'
     return card(
         c,
         label="PyGAD. Open-source Python library for genetic algorithms. Optimize anything and train Keras and PyTorch models. pygad.com",
@@ -277,7 +387,7 @@ def pygad(c):
         ],
         link="pygad.com",
         mark=mark,
-        mark_style=PYGAD_STYLE,
+        mark_style=pygad_style(),
     )
 
 
