@@ -8,6 +8,7 @@
   <a href="https://x.com/ahmedfgad"><img src="https://img.shields.io/badge/X-@ahmedfgad-000000?logo=x&logoColor=white" alt="X"></a>
   <a href="mailto:ahmed.f.gad@gmail.com"><img src="https://img.shields.io/badge/Email-ahmed.f.gad%40gmail.com-EA4335?logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://vilvik.com"><img src="https://img.shields.io/badge/Vilvik-vilvik.com-2563EB" alt="Vilvik website"></a>
+  <a href="https://www.youtube.com/@AhmedGadd"><img src="https://img.shields.io/badge/YouTube-@AhmedGadd-FF0000?logo=youtube&logoColor=white" alt="YouTube channel"></a>
   <br>
   <a href="https://scholar.google.com/citations?user=r07tjocAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google%20Scholar-Ahmed%20Fawzy%20Gad-4285F4?logo=googlescholar&logoColor=white" alt="Google Scholar"></a>
   <a href="https://www.researchgate.net/profile/Ahmed-Gad-12"><img src="https://img.shields.io/badge/ResearchGate-Ahmed%20Gad-00CCBB?logo=researchgate&logoColor=white" alt="ResearchGate"></a>
@@ -85,6 +86,8 @@ pip install vilvik
   </tr>
 </table>
 
+All my books are on my [Amazon author page](https://amazon.com/author/ahmedgad).
+
 **More books:** [Do Machine Learning Yourself with Python](https://leanpub.com/doml) (Leanpub, 2019) · [TensorFlow: A Guide to Build Artificial Neural Networks Using Python](https://www.amazon.com/dp/6202073128) (LAP Lambert, 2017)
 
 ## Research
@@ -124,6 +127,19 @@ I've published more than 90 tutorials on machine learning, deep learning and Pyt
     <td align="center" valign="top" width="20%"><img src="assets/apps/easyupload.png" width="72" alt="EasyUpload app icon"><br><b>EasyUpload</b><br><sub>Send files from Android to a desktop PC</sub><br><a href="https://play.google.com/store/apps/details?id=gad.heartbeat.androidflask.easyupload">Google&nbsp;Play</a></td>
   </tr>
 </table>
+
+## Support My Work
+
+PyGAD and my other open-source projects are free. If they help you, you can support them here:
+
+<p>
+  <a href="https://github.com/sponsors/ahmedfgad"><img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-EA4AAA?logo=githubsponsors&logoColor=white" alt="Sponsor on GitHub"></a>
+  <a href="https://paypal.me/ahmedfgad"><img src="https://img.shields.io/badge/PayPal-paypal.me%2Fahmedfgad-003087?logo=paypal&logoColor=white" alt="Donate with PayPal"></a>
+  <a href="https://opencollective.com/pygad"><img src="https://img.shields.io/badge/Open%20Collective-PyGAD-7FADF2?logo=opencollective&logoColor=white" alt="Open Collective"></a>
+  <a href="https://donate.stripe.com/eVa5kO866elKgM0144"><img src="https://img.shields.io/badge/Card-Donate%20with%20Stripe-635BFF?logo=stripe&logoColor=white" alt="Donate by card"></a>
+</p>
+
+In Canada, you can also send an Interac e-Transfer to ahmed.f.gad@gmail.com.
 
 ## Tools I Use
 
