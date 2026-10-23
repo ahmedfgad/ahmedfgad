@@ -12,6 +12,7 @@
   <br>
   <a href="https://scholar.google.com/citations?user=r07tjocAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google%20Scholar-Ahmed%20Fawzy%20Gad-4285F4?logo=googlescholar&logoColor=white" alt="Google Scholar"></a>
   <a href="https://www.researchgate.net/profile/Ahmed-Gad-12"><img src="https://img.shields.io/badge/ResearchGate-Ahmed%20Gad-00CCBB?logo=researchgate&logoColor=white" alt="ResearchGate"></a>
+  <a href="https://orcid.org/0000-0003-1978-8574"><img src="https://img.shields.io/badge/ORCID-0000--0003--1978--8574-A6CE39?logo=orcid&logoColor=white" alt="ORCID"></a>
 </p>
 
 I'm a senior AI engineer and researcher in Ontario, Canada. I've built AI for cybersecurity at Trend Micro and machine learning for cancer research at Medicia Research. I created PyGAD, an open-source genetic algorithm library, and founded Vilvik. I've also written six books and more than 90 tutorials on machine learning, computer vision and Python, and I build mobile apps.
@@ -48,6 +49,7 @@ pip install vilvik
 
 <p>
   <a href="https://github.com/ahmedfgad/GeneticAlgorithmPython"><img src="https://img.shields.io/github/stars/ahmedfgad/GeneticAlgorithmPython?style=flat&logo=github&label=Stars" alt="GitHub stars"></a>
+  <a href="https://pepy.tech/projects/pygad"><img src="https://static.pepy.tech/badge/pygad" alt="Total downloads"></a>
   <a href="https://pypi.org/project/pygad"><img src="https://img.shields.io/pypi/dm/pygad?logo=pypi&logoColor=white&label=Downloads" alt="Monthly downloads"></a>
   <a href="https://pygad.com"><img src="https://img.shields.io/badge/Website-pygad.com-0876D8" alt="PyGAD website"></a>
   <a href="https://pygad.readthedocs.io"><img src="https://img.shields.io/badge/Docs-Read%20the%20Docs-8CA1AF?logo=readthedocs&logoColor=white" alt="Documentation"></a>
@@ -60,6 +62,7 @@ pip install vilvik
 |---|---|---|
 | [NumPyCNN](https://github.com/ahmedfgad/NumPyCNN) | Convolutional neural networks built from scratch with NumPy | ![stars](https://img.shields.io/github/stars/ahmedfgad/NumPyCNN?style=flat&label=%E2%98%85) |
 | [NeuralGenetic](https://github.com/ahmedfgad/NeuralGenetic) | Train neural networks for classification and regression with the genetic algorithm | ![stars](https://img.shields.io/github/stars/ahmedfgad/NeuralGenetic?style=flat&label=%E2%98%85) |
+| [Mask-RCNN-TF2](https://github.com/ahmedfgad/Mask-RCNN-TF2) | Port of Matterport's Mask R-CNN object detection and segmentation to TensorFlow 2 | ![stars](https://img.shields.io/github/stars/ahmedfgad/Mask-RCNN-TF2?style=flat&label=%E2%98%85) |
 | [NumPyANN](https://github.com/ahmedfgad/NumPyANN) | Artificial neural networks implemented with NumPy | ![stars](https://img.shields.io/github/stars/ahmedfgad/NumPyANN?style=flat&label=%E2%98%85) |
 | [TorchGA](https://github.com/ahmedfgad/TorchGA) · [KerasGA](https://github.com/ahmedfgad/KerasGA) | Train PyTorch and Keras models with PyGAD | ![stars](https://img.shields.io/github/stars/ahmedfgad/TorchGA?style=flat&label=%E2%98%85) |
 | [FederatedLearning](https://github.com/ahmedfgad/FederatedLearning) | A federated learning demo in Python using sockets | ![stars](https://img.shields.io/github/stars/ahmedfgad/FederatedLearning?style=flat&label=%E2%98%85) |
@@ -94,7 +97,7 @@ All my books are on my [Amazon author page](https://amazon.com/author/ahmedgad).
 
 My work has more than 1,000 citations on [Google Scholar](https://scholar.google.com/citations?user=r07tjocAAAAJ&hl=en). Selected papers:
 
-- [PyGAD: An Intuitive Genetic Algorithm Python Library](https://doi.org/10.1007/s11042-023-17167-y). Multimedia Tools and Applications, 2023. ([arXiv](https://arxiv.org/abs/2106.06158))
+- [PyGAD: An Intuitive Genetic Algorithm Python Library](https://doi.org/10.1007/s11042-023-17167-y). Multimedia Tools and Applications, vol. 83, pp. 58029-58042, 2024. ([arXiv](https://arxiv.org/abs/2106.06158))
 - [An Adaptive High-Fidelity Image Compression Framework for Internet of Vehicles](https://doi.org/10.1109/ICC45855.2022.9838913), with Amiya Nayak. IEEE ICC, 2022.
 - [Crowd Density Estimation Using Multiple Features Categories and Multiple Regression Models](https://doi.org/10.1109/ICCES.2017.8275346), with Ahmed Hamad and Khalid Amin. IEEE ICCES, 2017.
 
@@ -102,7 +105,7 @@ All my papers are on [Google Scholar](https://scholar.google.com/citations?user=
 
 ## Writing
 
-I've published more than 90 tutorials on machine learning, deep learning and Python, and some have been translated into Chinese, Turkish, Russian and Hungarian.
+I've published more than 90 tutorials on machine learning, deep learning and Python, including three articles for Neptune.ai, and some have been translated into Chinese, Turkish, Russian and Hungarian.
 
 <p>
   <a href="https://www.kdnuggets.com/author/ahmed-gad"><img src="https://img.shields.io/badge/KDnuggets-Articles-0B5394" alt="KDnuggets articles"></a>
