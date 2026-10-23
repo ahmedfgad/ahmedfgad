@@ -8,6 +8,9 @@
   <a href="https://x.com/ahmedfgad"><img src="https://img.shields.io/badge/X-@ahmedfgad-000000?logo=x&logoColor=white" alt="X"></a>
   <a href="mailto:ahmed.f.gad@gmail.com"><img src="https://img.shields.io/badge/Email-ahmed.f.gad%40gmail.com-EA4335?logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://vilvik.com"><img src="https://img.shields.io/badge/Vilvik-vilvik.com-2563EB" alt="Vilvik website"></a>
+  <br>
+  <a href="https://scholar.google.com/citations?user=r07tjocAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google%20Scholar-Ahmed%20Fawzy%20Gad-4285F4?logo=googlescholar&logoColor=white" alt="Google Scholar"></a>
+  <a href="https://www.researchgate.net/profile/Ahmed-Gad-12"><img src="https://img.shields.io/badge/ResearchGate-Ahmed%20Gad-00CCBB?logo=researchgate&logoColor=white" alt="ResearchGate"></a>
 </p>
 
 I'm a machine learning researcher in Ottawa, Canada. I've spent years making evolutionary algorithms practical, first as an open-source library and now as a product. I also write books about deep learning, computer vision and large language models, and I build mobile apps.
@@ -77,7 +80,7 @@ pip install vilvik
   </tr>
 </table>
 
-**Research:** [PyGAD: An Intuitive Genetic Algorithm Python Library](https://doi.org/10.1007/s11042-023-17167-y), Multimedia Tools and Applications ([arXiv](https://arxiv.org/abs/2106.06158))
+**Research:** [PyGAD: An Intuitive Genetic Algorithm Python Library](https://doi.org/10.1007/s11042-023-17167-y), Multimedia Tools and Applications ([arXiv](https://arxiv.org/abs/2106.06158)). All my papers are on [Google Scholar](https://scholar.google.com/citations?user=r07tjocAAAAJ&hl=en) and [ResearchGate](https://www.researchgate.net/profile/Ahmed-Gad-12).
 
 ## My Apps
 
@@ -90,7 +93,7 @@ pip install vilvik
   <tr>
     <td align="center" valign="top" width="20%"><img src="assets/apps/takmila.png" width="72" alt="Takmila app icon"><br><b>Takmila</b><br><sub>Quran memorization by filling in the missing word</sub><br><a href="https://play.google.com/store/apps/details?id=org.takmila.takmila">Google&nbsp;Play</a> · <a href="https://apps.apple.com/us/app/takmila-quran-memorization/id6806126558">App&nbsp;Store</a></td>
     <td align="center" valign="top" width="20%"><img src="assets/apps/mawj.png" width="72" alt="Mawj Quran Radio app icon"><br><b>Mawj Quran Radio</b><br><sub>Live Quran radio, recitations and archives</sub><br><a href="https://play.google.com/store/apps/details?id=io.github.ahmedfgad.mawjradio">Google&nbsp;Play</a> · <a href="https://apps.apple.com/us/app/mawj-quran-radio/id6806831995">App&nbsp;Store</a></td>
-    <td align="center" valign="top" width="20%"><img src="assets/apps/swellfire.png" width="72" alt="SwellFire app icon"><br><b>SwellFire</b><br><sub>Lead a growing squad through gates to boss battles</sub><br><a href="https://play.google.com/store/apps/details?id=com.vilvik.swellfire">Google&nbsp;Play</a></td>
+    <td align="center" valign="top" width="20%"><img src="assets/apps/swellfire.png" width="72" alt="SwellFire app icon"><br><b>SwellFire</b><br><sub>Lead a growing squad through gates to boss battles</sub><br><a href="https://play.google.com/store/apps/details?id=com.vilvik.swellfire">Google&nbsp;Play</a> · <a href="https://apps.apple.com/app/id6821999904">App&nbsp;Store</a>&nbsp;<sub>(soon)</sub></td>
     <td align="center" valign="top" width="20%"><img src="assets/apps/cointex.png" width="72" alt="CoinTex app icon"><br><b>CoinTex</b><br><sub>60 arcade levels across 6 worlds, built with Python</sub><br><a href="https://play.google.com/store/apps/details?id=coin.tex.cointexreactfast">Google&nbsp;Play</a> · <a href="https://github.com/ahmedfgad/CoinTex">Code</a></td>
     <td align="center" valign="top" width="20%"><img src="assets/apps/easyupload.png" width="72" alt="EasyUpload app icon"><br><b>EasyUpload</b><br><sub>Send files from Android to a desktop PC</sub><br><a href="https://play.google.com/store/apps/details?id=gad.heartbeat.androidflask.easyupload">Google&nbsp;Play</a></td>
   </tr>
