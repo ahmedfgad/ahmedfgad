@@ -139,7 +139,7 @@ def header(c):
     body = f"""{panel(w, h, c)}
 <g font-family="{FONT}">
   <text class="t1" x="56" y="112" font-size="54" font-weight="700" fill="{c['text']}">Ahmed Gad</text>
-  <text class="t2" x="58" y="156" font-size="22" fill="{c['muted']}">Machine learning researcher and technical author</text>
+  <text class="t2" x="58" y="156" font-size="22" fill="{c['muted']}">Senior AI engineer and researcher</text>
   <text class="t3" x="58" y="200" font-size="22" fill="{c['text']}">Founder of <tspan font-weight="700" fill="{c['blue']}">Vilvik</tspan>  ·  Creator of <tspan font-weight="700" fill="{c['pygad']}">PyGAD</tspan></text>
   <text class="t4" x="58" y="244" font-size="17" fill="{c['muted']}">Evolutionary algorithms, deep learning, and the tools that make them easy to use.</text>
 </g>
@@ -149,7 +149,7 @@ def header(c):
   <path class="star" d="M{ox} {oy - 11} L{ox + 3.2} {oy - 3.4} L{ox + 11} {oy - 3.4} L{ox + 4.8} {oy + 1.6} L{ox + 7} {oy + 9.5} L{ox} {oy + 4.7} L{ox - 7} {oy + 9.5} L{ox - 4.8} {oy + 1.6} L{ox - 11} {oy - 3.4} L{ox - 3.2} {oy - 3.4} Z" fill="{c['amber']}"/>
   {gen_svg}
 </g>"""
-    return svg_doc(w, h, "Ahmed Gad. Machine learning researcher and technical author. Founder of Vilvik, creator of PyGAD.", style, body)
+    return svg_doc(w, h, "Ahmed Gad. Senior AI engineer and researcher. Founder of Vilvik, creator of PyGAD.", style, body)
 
 
 # --------------------------------------------------------- product cards ---

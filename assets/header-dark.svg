@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Ahmed Gad. Machine learning researcher and technical author. Founder of Vilvik, creator of PyGAD.">
-<title>Ahmed Gad. Machine learning researcher and technical author. Founder of Vilvik, creator of PyGAD.</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Ahmed Gad. Senior AI engineer and researcher. Founder of Vilvik, creator of PyGAD.">
+<title>Ahmed Gad. Senior AI engineer and researcher. Founder of Vilvik, creator of PyGAD.</title>
 <style>
 @keyframes p0 {0% { transform: translate(-154px,68px); opacity: 0; fill: #6e7681; }6% { transform: translate(-154px,68px); opacity: 1; }30% { transform: translate(-79px,49px); }52% { transform: translate(-35px,13px); fill: #6e7681; }72%, 90% { transform: translate(0,0); opacity: 1; fill: #4c8dff; }100% { transform: translate(0,0); opacity: 0; fill: #4c8dff; } }.p0 { animation: p0 11s cubic-bezier(.45,0,.25,1) 0.01s infinite; }
 @keyframes p1 {0% { transform: translate(-26px,-113px); opacity: 0; fill: #6e7681; }6% { transform: translate(-26px,-113px); opacity: 1; }30% { transform: translate(-23px,-57px); }52% { transform: translate(-5px,-26px); fill: #6e7681; }72%, 90% { transform: translate(0,0); opacity: 1; fill: #4c8dff; }100% { transform: translate(0,0); opacity: 0; fill: #4c8dff; } }.p1 { animation: p1 11s cubic-bezier(.45,0,.25,1) 0.15s infinite; }
@@ -40,7 +40,7 @@
 <rect x="1" y="1" width="1198" height="298" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
 <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
   <text class="t1" x="56" y="112" font-size="54" font-weight="700" fill="#e6edf3">Ahmed Gad</text>
-  <text class="t2" x="58" y="156" font-size="22" fill="#9198a1">Machine learning researcher and technical author</text>
+  <text class="t2" x="58" y="156" font-size="22" fill="#9198a1">Senior AI engineer and researcher</text>
   <text class="t3" x="58" y="200" font-size="22" fill="#e6edf3">Founder of <tspan font-weight="700" fill="#4c8dff">Vilvik</tspan>  ·  Creator of <tspan font-weight="700" fill="#3b9cf0">PyGAD</tspan></text>
   <text class="t4" x="58" y="244" font-size="17" fill="#9198a1">Evolutionary algorithms, deep learning, and the tools that make them easy to use.</text>
 </g>
