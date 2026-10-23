@@ -136,7 +136,6 @@ PyGAD and my other open-source projects are free. If they help you, you can supp
   <a href="https://github.com/sponsors/ahmedfgad"><img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-EA4AAA?logo=githubsponsors&logoColor=white" alt="Sponsor on GitHub"></a>
   <a href="https://paypal.me/ahmedfgad"><img src="https://img.shields.io/badge/PayPal-paypal.me%2Fahmedfgad-003087?logo=paypal&logoColor=white" alt="Donate with PayPal"></a>
   <a href="https://opencollective.com/pygad"><img src="https://img.shields.io/badge/Open%20Collective-PyGAD-7FADF2?logo=opencollective&logoColor=white" alt="Open Collective"></a>
-  <a href="https://donate.stripe.com/eVa5kO866elKgM0144"><img src="https://img.shields.io/badge/Card-Donate%20with%20Stripe-635BFF?logo=stripe&logoColor=white" alt="Donate by card"></a>
 </p>
 
 In Canada, you can also send an Interac e-Transfer to ahmed.f.gad@gmail.com.
