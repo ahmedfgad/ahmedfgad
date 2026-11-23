@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img src="assets/header-light.svg" width="100%" alt="Ahmed Gad. Senior AI engineer and researcher. Founder of Vilvik, creator of PyGAD.">
+  <img src="assets/header-light.svg" width="100%" alt="Ahmed Gad. Senior AI engineer and researcher. Creator of PyGAD, founder of Vilvik.">
 </picture>
 
 <p align="center">
@@ -26,7 +26,7 @@ I'm a senior AI engineer and researcher in Ontario, Canada. I've built AI for cy
   </picture>
 </a>
 
-**[Vilvik](https://vilvik.com)** is my company, an early-stage Canadian startup. Its online application runs evolutionary optimization in the cloud, so you can optimize a decision, tune a model, or evolve a game agent from the browser, the REST API, or Python, without setting anything up. Vilvik also offers AI consulting.
+**[Vilvik](https://vilvik.com)** is my company, an early-stage Canadian startup. Its online application runs evolutionary optimization in the cloud, so you can optimize a decision, tune a model, or evolve a game agent from the browser, the REST API, or Python, without setting anything up.
 
 ```bash
 pip install vilvik
