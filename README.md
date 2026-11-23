@@ -15,7 +15,7 @@
   <a href="https://orcid.org/0000-0003-1978-8574"><img src="https://img.shields.io/badge/ORCID-0000--0003--1978--8574-A6CE39?logo=orcid&logoColor=white" alt="ORCID"></a>
 </p>
 
-I'm a senior AI engineer and researcher in Ontario, Canada. I've built AI for cybersecurity at Trend Micro and machine learning for cancer research at Medicia Research. I created PyGAD, an open-source genetic algorithm library, and founded Vilvik. I've also written six books and more than 90 tutorials on machine learning, computer vision and Python, and I build mobile apps.
+I'm a senior AI engineer and researcher in Ontario, Canada. I've built AI for cybersecurity at Trend Micro and machine learning for cancer research at Medicia Research. I created PyGAD, an open-source genetic algorithm library, and founded Vilvik. I've also written six books and nearly 100 tutorials on machine learning, computer vision and Python, and I build mobile apps.
 
 ## What I'm Building
 
@@ -92,7 +92,7 @@ pip install vilvik
     <td align="center" valign="top"><b>Transformers and Large Language Models</b><br><sub>A Hands-On Guide to RAG and Agentic AI<br>Apress, 2026</sub><br><a href="https://www.amazon.com/dp/B0GTPRZ6MY">Amazon</a> · <a href="https://link.springer.com/book/10.1007/979-8-8688-2785-3">Springer</a> · <a href="https://github.com/ahmedfgad/Transformers-Gad">Code</a></td>
     <td align="center" valign="top"><b>Introduction to Deep Learning and Neural Networks with Python</b><br><sub>A Practical Guide<br>Academic Press, 2020</sub><br><a href="https://www.amazon.com/dp/0323909337">Amazon</a> · <a href="https://github.com/ahmedfgad/IntroDLPython">Code</a></td>
     <td align="center" valign="top"><b>Building Android Apps in Python Using Kivy with Android Studio</b><br><sub>With Pyjnius, Plyer, and Buildozer<br>Apress, 2019</sub><br><a href="https://www.amazon.com/dp/1484250303">Amazon</a> · <a href="https://github.com/Apress/building-android-apps-in-python-using-kivy">Code</a></td>
-    <td align="center" valign="top"><b>Practical Computer Vision Applications Using Deep Learning with CNNs</b><br><sub>With Examples in Python Using TensorFlow and Kivy<br>Apress, 2018</sub><br><a href="https://www.amazon.com/dp/1484241665">Amazon</a> · <a href="https://github.com/Apress/practical-computer-vision-applications">Code</a></td>
+    <td align="center" valign="top"><b>Practical Computer Vision Applications Using Deep Learning with CNNs</b><br><sub>With Examples in Python Using TensorFlow and Kivy<br>Apress, 2018<br>Chinese edition: Tsinghua University Press, 2020</sub><br><a href="https://www.amazon.com/dp/1484241665">Amazon</a> · <a href="https://github.com/Apress/practical-computer-vision-applications">Code</a> · <a href="https://book.douban.com/subject/35221288/">中文版</a></td>
   </tr>
 </table>
 
@@ -112,7 +112,7 @@ All my papers are on [Google Scholar](https://scholar.google.com/citations?user=
 
 ## Writing
 
-I've published more than 90 tutorials on machine learning, deep learning and Python, including three articles for Neptune.ai. I was a data science contributor to KDnuggets and Towards Data Science (2018-2021) and AI Tribune (2018-2019).
+I've published nearly 100 tutorials on machine learning, deep learning and Python, including four articles for Neptune.ai, and wrote some of them in Arabic too. I was a data science contributor to KDnuggets and Towards Data Science (2018-2021) and AI Tribune (2018-2019).
 
 <p>
   <a href="https://www.kdnuggets.com/author/ahmed-gad"><img src="https://img.shields.io/badge/KDnuggets-Articles-0B5394" alt="KDnuggets articles"></a>
@@ -123,6 +123,8 @@ I've published more than 90 tutorials on machine learning, deep learning and Pyt
 
 **Selected tutorials:**
 
+- [Handling Python NumPy Arrays in C++ using Pybind11](https://medium.com/@ahmedfgad/handling-python-numpy-arrays-in-c-using-pybind11-0b7450f4f4b3). Medium, 2024.
+- [Pybind11 Tutorial: Binding C++ Code to Python](https://medium.com/@ahmedfgad/pybind11-tutorial-binding-c-code-to-python-337da23685dc). Medium, 2024.
 - [Run a Private Kubernetes Cluster in a Virtual Private Cloud in AWS](https://medium.com/@ahmedfgad/run-a-private-kubernetes-cluster-in-a-virtual-private-cloud-in-aws-bff6b49cf54a). Medium, 2023.
 - [Maximum Likelihood Estimation for Parameter Estimation](https://blog.paperspace.com/maximum-likelihood-estimation-parametric-classification/). Paperspace, 2021.
 - [AI Bot Plays the Flappy Bird Game](https://heartbeat.comet.ml/ai-bot-plays-the-flappy-bird-game-1a2fcc730445). Heartbeat, 2021.
@@ -142,7 +144,7 @@ I've published more than 90 tutorials on machine learning, deep learning and Pyt
 - [Building Convolutional Neural Network Using NumPy from Scratch](https://www.kdnuggets.com/2018/04/building-convolutional-neural-network-numpy-scratch.html). KDnuggets, 2018.
 - [Introduction to Optimization with Genetic Algorithm](https://www.linkedin.com/pulse/introduction-optimization-genetic-algorithm-ahmed-gad). LinkedIn, 2018.
 
-**Translated by others:** [Turkish](https://erencan34.medium.com/pygad-ile-genetik-algoritmay%C4%B1-kullanarak-keras-modelleri-nas%C4%B1l-e%C4%9Fitilir-cf92639a478c) (training Keras models with PyGAD) · [Hungarian](https://thebojda.medium.com/tensorflow-alapoz%C3%B3-10-24f7767d4a2c) (training neural networks with PyGAD and OpenAI Gym) · [Russian](https://neurohive.io/ru/tutorial/nejronnaja-set-na-numpy/) (a neural network from scratch with NumPy) · [Chinese](https://zhuanlan.zhihu.com/p/41489784) (how many hidden layers and neurons to use).
+**Translated by others:** [Turkish](https://erencan34.medium.com/pygad-ile-genetik-algoritmay%C4%B1-kullanarak-keras-modelleri-nas%C4%B1l-e%C4%9Fitilir-cf92639a478c) (training Keras models with PyGAD) · [Russian](https://neurohive.io/ru/tutorial/nejronnaja-set-na-numpy/) (a neural network from scratch with NumPy) · [Chinese](https://zhuanlan.zhihu.com/p/41489784) (how many hidden layers and neurons to use) · [Chinese](https://developer.aliyun.com/article/715759) (feature reduction with the genetic algorithm). My book *Practical Computer Vision Applications Using Deep Learning with CNNs* also has an official [Chinese edition](https://book.douban.com/subject/35221288/) (Tsinghua University Press, 2020).
 
 ## My Apps
 
