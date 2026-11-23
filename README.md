@@ -71,6 +71,13 @@ pip install vilvik
 | [GARI](https://github.com/ahmedfgad/GARI) | Reproduce an image with the genetic algorithm by evolving pixel values | ![stars](https://img.shields.io/github/stars/ahmedfgad/GARI?style=flat&label=%E2%98%85) |
 | [CIFAR10CNNFlask](https://github.com/ahmedfgad/CIFAR10CNNFlask) | A CNN image classifier served over HTTP with Flask | ![stars](https://img.shields.io/github/stars/ahmedfgad/CIFAR10CNNFlask?style=flat&label=%E2%98%85) |
 | [AndroidFlask](https://github.com/ahmedfgad/AndroidFlask) | Upload images from an Android app to a Python Flask server | ![stars](https://img.shields.io/github/stars/ahmedfgad/AndroidFlask?style=flat&label=%E2%98%85) |
+| [FlappyBirdPyGAD](https://github.com/ahmedfgad/FlappyBirdPyGAD) | A genetic algorithm that learns to play Flappy Bird, built with PyGAD | ![stars](https://img.shields.io/github/stars/ahmedfgad/FlappyBirdPyGAD?style=flat&label=%E2%98%85) |
+| [NumPyCNNAndroid](https://github.com/ahmedfgad/NumPyCNNAndroid) | Convolutional neural networks on Android, written in Python with Kivy and NumPy (IEEE ITCE 2019) | ![stars](https://img.shields.io/github/stars/ahmedfgad/NumPyCNNAndroid?style=flat&label=%E2%98%85) |
+| [KivyAndroidClassification](https://github.com/ahmedfgad/KivyAndroidClassification) · [OpenCVAndroid](https://github.com/ahmedfgad/OpenCVAndroid) | Image classification on Android with neural networks and OpenCV | ![stars](https://img.shields.io/github/stars/ahmedfgad/KivyAndroidClassification?style=flat&label=%E2%98%85) |
+| [AndroidChat](https://github.com/ahmedfgad/AndroidChat) | An Android chat app with registration, login and messaging on a Flask and MySQL server | ![stars](https://img.shields.io/github/stars/ahmedfgad/AndroidChat?style=flat&label=%E2%98%85) |
+| [IntroDLPython](https://github.com/ahmedfgad/IntroDLPython) | A generic, sklearn-like gradient descent for training neural networks, built step by step | ![stars](https://img.shields.io/github/stars/ahmedfgad/IntroDLPython?style=flat&label=%E2%98%85) |
+
+**Earlier work:** automatic crowd density estimation, from a few to thousands of people (M.Sc. research, 2016-2018) · SkyMeter, an Android app that measures sky pollution with computer vision (NASA Space Apps Cairo 2015, top 10) · Face Login, a desktop app that grants access by identifying the user's face (B.Sc. graduation project, 2015) · optical character recognition for document images (2015).
 
 ## Books
 
@@ -105,7 +112,7 @@ All my papers are on [Google Scholar](https://scholar.google.com/citations?user=
 
 ## Writing
 
-I've published more than 90 tutorials on machine learning, deep learning and Python, including three articles for Neptune.ai, and some have been translated into Chinese, Turkish, Russian and Hungarian.
+I've published more than 90 tutorials on machine learning, deep learning and Python, including three articles for Neptune.ai. I was a data science contributor to KDnuggets and Towards Data Science (2018-2021) and AI Tribune (2018-2019).
 
 <p>
   <a href="https://www.kdnuggets.com/author/ahmed-gad"><img src="https://img.shields.io/badge/KDnuggets-Articles-0B5394" alt="KDnuggets articles"></a>
@@ -113,6 +120,29 @@ I've published more than 90 tutorials on machine learning, deep learning and Pyt
   <a href="https://blog.paperspace.com/author/ahmed/"><img src="https://img.shields.io/badge/Paperspace-Tutorials-0E2B5C?logo=paperspace&logoColor=white" alt="Paperspace tutorials"></a>
   <a href="https://www.datacamp.com/profile/ahmedfgad"><img src="https://img.shields.io/badge/DataCamp-Tutorials-03EF62?logo=datacamp&logoColor=black" alt="DataCamp tutorials"></a>
 </p>
+
+**Selected tutorials:**
+
+- [Run a Private Kubernetes Cluster in a Virtual Private Cloud in AWS](https://medium.com/@ahmedfgad/run-a-private-kubernetes-cluster-in-a-virtual-private-cloud-in-aws-bff6b49cf54a). Medium, 2023.
+- [Maximum Likelihood Estimation for Parameter Estimation](https://blog.paperspace.com/maximum-likelihood-estimation-parametric-classification/). Paperspace, 2021.
+- [AI Bot Plays the Flappy Bird Game](https://heartbeat.comet.ml/ai-bot-plays-the-flappy-bird-game-1a2fcc730445). Heartbeat, 2021.
+- [Python Scopes and the LEGB Rule](https://medium.com/@ahmedfgad/python-scopes-and-the-legb-rule-d37bf3277e2c). Medium, 2021.
+- [Federated Learning With Keras](https://blog.paperspace.com/federated-learning-with-keras/). Paperspace, 2021.
+- [Image Classification on Android Using OpenCV](https://fritz.ai/image-classification-on-android-using-opencv/). Heartbeat, 2019.
+- [From Y=X to Building a Complete Artificial Neural Network](https://fritz.ai/from-y-x-to-building-a-complete-artificial-neural-network/). Heartbeat, 2019.
+- [Building an Android Login System](https://heartbeat.comet.ml/building-an-android-login-system-73854d7b6ff9). Heartbeat, 2019.
+- [Series: Gradient Descent Implementation in Python for Training Neural Networks](https://blog.paperspace.com/tag/series-gradient-descent-with-python/). Paperspace, 2019.
+- [Artificial Neural Networks Optimization Using Genetic Algorithm with Python](https://www.kdnuggets.com/2019/03/artificial-neural-networks-optimization-genetic-algorithm-python.html). KDnuggets, 2019.
+- [Artificial Neural Network Implementation Using NumPy and Image Classification](https://www.kdnuggets.com/2019/02/artificial-neural-network-implementation-using-numpy-and-image-classification.html). KDnuggets, 2019.
+- [Deduce the Number of Layers and Neurons for ANN](https://www.datacamp.com/tutorial/layers-neurons-artificial-neural-networks). DataCamp, 2018.
+- [Genetic Algorithm Implementation in Python](https://www.kdnuggets.com/2018/07/genetic-algorithm-implementation-python.html). KDnuggets, 2018.
+- [Beginners Ask "How Many Hidden Layers/Neurons to Use in Artificial Neural Networks?"](https://www.linkedin.com/pulse/beginners-ask-how-many-hidden-layersneurons-use-artificial-ahmed-gad). LinkedIn, 2018.
+- [Complete Guide to Build ConvNet HTTP-Based Application Using TensorFlow and Flask RESTful Python API](https://www.kdnuggets.com/2018/05/complete-guide-convnet-tensorflow-flask-restful-python-api.html). KDnuggets, 2018.
+- [Derivation of Convolutional Neural Network from Fully Connected Network Step-By-Step](https://www.kdnuggets.com/2018/04/derivation-convolutional-neural-network-fully-connected-step-by-step.html). KDnuggets, 2018.
+- [Building Convolutional Neural Network Using NumPy from Scratch](https://www.kdnuggets.com/2018/04/building-convolutional-neural-network-numpy-scratch.html). KDnuggets, 2018.
+- [Introduction to Optimization with Genetic Algorithm](https://www.linkedin.com/pulse/introduction-optimization-genetic-algorithm-ahmed-gad). LinkedIn, 2018.
+
+**Translated by others:** [Turkish](https://erencan34.medium.com/pygad-ile-genetik-algoritmay%C4%B1-kullanarak-keras-modelleri-nas%C4%B1l-e%C4%9Fitilir-cf92639a478c) (training Keras models with PyGAD) · [Hungarian](https://thebojda.medium.com/tensorflow-alapoz%C3%B3-10-24f7767d4a2c) (training neural networks with PyGAD and OpenAI Gym) · [Russian](https://neurohive.io/ru/tutorial/nejronnaja-set-na-numpy/) (a neural network from scratch with NumPy) · [Chinese](https://zhuanlan.zhihu.com/p/41489784) (how many hidden layers and neurons to use).
 
 ## My Apps
 
