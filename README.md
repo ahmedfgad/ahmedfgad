@@ -146,6 +146,8 @@ I've published nearly 100 tutorials on machine learning, deep learning and Pytho
 
 **Translated by others:** [Turkish](https://erencan34.medium.com/pygad-ile-genetik-algoritmay%C4%B1-kullanarak-keras-modelleri-nas%C4%B1l-e%C4%9Fitilir-cf92639a478c) (training Keras models with PyGAD) · [Russian](https://neurohive.io/ru/tutorial/nejronnaja-set-na-numpy/) (a neural network from scratch with NumPy) · [Chinese](https://zhuanlan.zhihu.com/p/41489784) (how many hidden layers and neurons to use) · [Chinese](https://developer.aliyun.com/article/715759) (feature reduction with the genetic algorithm). My book *Practical Computer Vision Applications Using Deep Learning with CNNs* also has an official [Chinese edition](https://book.douban.com/subject/35221288/) (Tsinghua University Press, 2020).
 
+**PyGAD in other languages:** articles about PyGAD in [Korean](https://data-newbie.tistory.com/m/685), [Hungarian](https://thebojda.medium.com/tensorflow-alapoz%C3%B3-10-24f7767d4a2c), Persian ([Quera](https://quera.org/blog/genetic-algorithm-in-python/), [LancerSara](https://lancersara.com/genetic-algorithm-in-python/)) and [Russian](https://neurohive.io/ru/frameworki/pygad-biblioteka-dlya-implementacii-geneticheskogo-algoritma). See [PyGAD in Other Languages](https://pygad.readthedocs.io/en/latest/help_languages.html).
+
 ## My Apps
 
 <p>
